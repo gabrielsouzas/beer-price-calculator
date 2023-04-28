@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+/* VARIAVEIS */
+:root {
+    --cor-fundo: #373738;
+    --cor-fundo-claro: #282829;
+    --cor-fundo-transparente: #d7d8abc5;
+    --cor-principal: #cfcd43; /* #2f91bf */
+    --cor-principal-clara: #d8d7ab;
+    --2nd-cor-principal: #ffffffcc;
+    --cor-texto: #fff;
+    --fonte-grande: 5rem;
+    --h2-fonte: 1.9rem;
+    --p-fonte: 1rem;
+}
+
+/* BODY */
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* HEADER - NAVBAR */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--cor-fundo-claro);
+    padding: 24px 14%;
+    transition: .3s;
+}
+
+.logo {
+    color: var(--cor-texto);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+span {
+    color: var(--cor-principal);
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--cor-texto);
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar a:hover {
+    background: var(--cor-principal);
+    transition: .3s;
+}
+
+#menu-icon {
+    font-size: 28px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+/* SECTION */
+section {
+    padding: 120px 14%;
+}
+
+/* principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+select, label, input {
+    min-width: 110px;
+    min-height: 50px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: none;
+    color: white;
+}
+
+.button-container {
+    align-self: flex-start;
+    padding-top: 8px;
+}
+
+.button-container button {
+    padding: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #cfcd43;
+    background-color: #282829;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #cfcd43;
+    color: #282829;
+}
