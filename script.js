@@ -1,3 +1,5 @@
+const priceInput = document.querySelector('#price_input')
+
 const fifty = document.querySelector('#fifty')
 const twoHundredSixtyNine = document.querySelector('#two_hundred_sixty_nine');
 const threeHundred = document.querySelector('#three_hundred')
@@ -7,8 +9,14 @@ const fourThousandTwoHundred = document.querySelector('#four_thousand_two_hundre
 
 const selectMl = document.querySelector('#sel_ml')
 
-function Calculate({target}) {
-    const price = target.value;
+function Calculate(event) {
+    var price = 0;
+    if (event.target === undefined) {
+        price = event.value;
+    } else {
+        price = event.target.value;
+    }
+    
     if (price) {
         const fiftyMlCost = (Number(price)/(Number(selectMl.value)/50));
         fifty.innerHTML = fiftyMlCost.toFixed(3);
@@ -28,3 +36,8 @@ function Calculate({target}) {
 function CalculateValueMl(fifty_ml_cost, selected_ml) {
     return (fifty_ml_cost*(Number(selected_ml)/50)).toFixed(2);
 }
+
+selectMl.addEventListener('change', () => {
+    //console.log(priceInput.innerHTML)
+    Calculate(priceInput)
+})

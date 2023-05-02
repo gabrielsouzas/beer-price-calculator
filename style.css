@@ -113,6 +113,10 @@ select, label, input {
     color: white;
 }
 
+select option {
+    background-color: #282829;
+}
+
 .button-container {
     align-self: flex-start;
     padding-top: 8px;
