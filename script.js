@@ -1,3 +1,5 @@
+const container = document.querySelector('.container');
+
 const priceInput = document.querySelectorAll('.price_input')
 
 const fifty = document.querySelectorAll('.fifty')
@@ -45,39 +47,58 @@ selectMl.forEach(element => {
 });
 
 function addLineBeer(){
-    const div = createElement('div');
+    lastIndex++;
+
+    const div = document.createElement('div');
     const selectBrand = createSelectBrand();
     
     const selectMl = createSelectMl();
+    setIndexAndClass(selectMl, lastIndex, 'sel_ml');
     
-    const input = createElement('input');
-    const labelA = createElement('label');
-    const labelB = createElement('label');
-    const labelC = createElement('label');
-    const labelD = createElement('label');
-    const labelE = createElement('label');
-    const labelF = createElement('label');
+    const input = document.createElement('input');
+    setIndexAndClass(input, lastIndex, 'price_input');
+    input.setAttribute('oninput', 'Calculate(event)');
 
+    const labelA = document.createElement('label');
+    setIndexAndClass(labelA, lastIndex, 'fifty', '0,00');
 
-    /*<div>
-                <select>
-                    <option value="Antartica">Antartica</option>
-                </select>
-                <select data-index="1" class="sel_ml">
-                    <option value="269">269</option>
-                    <option value="300" selected>300</option>
-                    <option value="350">350</option>
-                    <option value="1000">1000</option>
-                    <option value="4200">4200</option>
-                </select>
-                <input data-index="1" class="price_input" type="text" oninput="Calculate(event)">
-                <label data-index="1" class="fifty">0,00</label>
-                <label data-index="1" class="two_hundred_sixty_nine">0,00</label>
-                <label data-index="1" class="three_hundred">0,00</label>
-                <label data-index="1" class="three_hundred_fifty">0,00</label>
-                <label data-index="1" class="thousand">0,00</label>
-                <label data-index="1" class="four_thousand_two_hundred">0,00</label>
-            </div>*/
+    const labelB = document.createElement('label');
+    setIndexAndClass(labelB, lastIndex, 'two_hundred_sixty_nine', '0,00');
+
+    const labelC = document.createElement('label');
+    setIndexAndClass(labelC, lastIndex, 'three_hundred', '0,00');
+
+    const labelD = document.createElement('label');
+    setIndexAndClass(labelD, lastIndex, 'three_hundred_fifty', '0,00');
+
+    const labelE = document.createElement('label');
+    setIndexAndClass(labelE, lastIndex, 'thousand', '0,00');
+
+    const labelF = document.createElement('label');
+    setIndexAndClass(labelF, lastIndex, 'four_thousand_two_hundred', '0,00');
+
+    div.appendChild(selectBrand);
+    div.appendChild(selectMl);
+    div.appendChild(input);
+    div.appendChild(labelA);
+    div.appendChild(labelB);
+    div.appendChild(labelC);
+    div.appendChild(labelD);
+    div.appendChild(labelE);
+    div.appendChild(labelF);
+
+    container.appendChild(div);
+
+}
+
+function setIndexAndClass(element, index, class_name = '', text = '') {
+    if (class_name) {
+        element.classList.add('sel_ml');
+    }
+    if (text) {
+        element.innerHTML = text;
+    }
+    element.setAttribute('data-index', `${index}`);
 }
 
 const createSelectMl = () => {
@@ -89,7 +110,7 @@ const createSelectMl = () => {
         <option value="4200">4200</option>
     `;
 
-    const select = createElement('select', '', options);
+    const select = document.createElement('select', '', options);
     
     return select;
 }
@@ -107,7 +128,11 @@ const createSelectBrand = () => {
         <option value="Amstel">Amstel</option>
     `;
 
-    const select = createElement('select', '', options);
+    const select = document.createElement('select', '', options);
     
     return select;
 }
+
+const btnAdd = document.querySelector('#btn-add');
+
+btnAdd.addEventListener('click', addLineBeer);
