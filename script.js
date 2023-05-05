@@ -1,19 +1,29 @@
 const container = document.querySelector('.container');
 
-const priceInput = document.querySelectorAll('.price_input')
+var priceInput = document.querySelectorAll('.price_input')
+var fifty = document.querySelectorAll('.fifty')
+var twoHundredSixtyNine = document.querySelectorAll('.two_hundred_sixty_nine');
+var threeHundred = document.querySelectorAll('.three_hundred')
+var threeHundredFifty = document.querySelectorAll('.three_hundred_fifty')
+var thousand = document.querySelectorAll('.thousand')
+var fourThousandTwoHundred = document.querySelectorAll('.four_thousand_two_hundred')
 
-const fifty = document.querySelectorAll('.fifty')
-const twoHundredSixtyNine = document.querySelectorAll('.two_hundred_sixty_nine');
-const threeHundred = document.querySelectorAll('.three_hundred')
-const threeHundredFifty = document.querySelectorAll('.three_hundred_fifty')
-const thousand = document.querySelectorAll('.thousand')
-const fourThousandTwoHundred = document.querySelectorAll('.four_thousand_two_hundred')
-
-const selectMl = document.querySelectorAll('.sel_ml')
+var selectMl = document.querySelectorAll('.sel_ml')
 
 var lastIndex = 0;
 
 function Calculate(event) {
+    // To catch the elements created with javascript
+    selectMl = document.querySelectorAll('.sel_ml')
+    priceInput = document.querySelectorAll('.price_input')
+    fifty = document.querySelectorAll('.fifty')
+    twoHundredSixtyNine = document.querySelectorAll('.two_hundred_sixty_nine');
+    threeHundred = document.querySelectorAll('.three_hundred')
+    threeHundredFifty = document.querySelectorAll('.three_hundred_fifty')
+    thousand = document.querySelectorAll('.thousand')
+    fourThousandTwoHundred = document.querySelectorAll('.four_thousand_two_hundred')
+
+
     if (event) {
         var price = 0;
         var index = 0;
@@ -24,7 +34,7 @@ function Calculate(event) {
             price = event.target.value;
             index = Number(event.target.dataset.index);
         }
-    
+        
         const fiftyMlCost = (Number(price)/(Number(selectMl[index].value)/50));
         fifty[index].innerHTML = fiftyMlCost.toFixed(3);
 
@@ -89,11 +99,13 @@ function addLineBeer(){
 
     container.appendChild(div);
 
+    removeAndAddButton();
+
 }
 
 function setIndexAndClass(element, index, class_name = '', text = '') {
     if (class_name) {
-        element.classList.add('sel_ml');
+        element.classList.add(class_name);
     }
     if (text) {
         element.innerHTML = text;
@@ -110,7 +122,7 @@ const createSelectMl = () => {
         <option value="4200">4200</option>
     `;
 
-    const select = document.createElement('select', '', options);
+    const select = createElement('select', '', options);
     
     return select;
 }
@@ -128,9 +140,40 @@ const createSelectBrand = () => {
         <option value="Amstel">Amstel</option>
     `;
 
-    const select = document.createElement('select', '', options);
+    const select = createElement('select', '', options);
     
     return select;
+}
+
+const createElement = (tag, innerText = '', innerHTML = '') => {
+    const element = document.createElement(tag);
+    
+    if (innerText) {
+        element.innerText = innerText;
+    }
+
+    if (innerHTML) {
+        element.innerHTML = innerHTML;
+    }
+
+    return element;
+}
+
+
+function removeAndAddButton() {
+    const buttonContainer = document.querySelector('.button-container');
+    buttonContainer.remove();
+
+    const newButtonContainer = document.createElement('div');
+    newButtonContainer.classList.add('button-container');
+
+    const button = document.createElement('button');
+    button.setAttribute('id', 'btn-add');
+    button.classList.add('material-symbols-outlined');
+    button.innerHTML = 'add';
+
+    newButtonContainer.appendChild(button);
+    container.appendChild(newButtonContainer);
 }
 
 const btnAdd = document.querySelector('#btn-add');
