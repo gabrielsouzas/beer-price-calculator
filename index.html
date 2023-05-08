@@ -7,14 +7,14 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <title>Beer Price Calculator</title>
+    <title>Comparador de preços</title>
 
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Beer<span>Price</span>Calculator</a>
+        <a href="#" class="logo">Comparador<span>de</span>Preços</a>
         <!--<div class="bx bx-menu" id="menu-icon"></div>-->
 
         <ul class="navbar">
@@ -23,18 +23,19 @@
     </header>
     <main>
         <section class="container">
-            <div>
-                <label>Brand</label>
-                <label>ML</label>
-                <label>Price</label>
-                <label>R$ 50 ML</label>
-                <label>R$ 269 ML</label>
-                <label>R$ 300 ML</label>
-                <label>R$ 350 ML</label>
-                <label>R$ 1000 ML</label>
-                <label>R$ 4200 ML (12 * 350 ML)</label>
+            <div class="table_header">
+                <label>Marca</label>
+                <label>ML/GR</label>
+                <label>Preço R$</label>
+                <label>50 ML/GR</label>
+                <input id="input-b" type="number" value="269">
+                <input id="input-c" type="number" value="300">
+                <input id="input-d" type="number" value="350">
+                <input id="input-e" type="number" value="1000">
+                <input id="input-f" type="number" value="4200">
+                <!--<label>R$ 4200 ML (12 * 350 ML)</label>-->
             </div>
-            <div>
+            <div class="table_body">
                 <select>
                     <option value="Antartica">Antartica</option>
                     <option value="Skol">Skol</option>

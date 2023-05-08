@@ -21,6 +21,7 @@
     --cor-principal-clara: #d8d7ab;
     --2nd-cor-principal: #ffffffcc;
     --cor-texto: #fff;
+    --cor-bordas: #fff;
     --fonte-grande: 5rem;
     --h2-fonte: 1.9rem;
     --p-fonte: 1rem;
@@ -43,7 +44,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: var(--cor-fundo-claro);
-    padding: 24px 14%;
+    padding: 24px 30px;
     transition: .3s;
 }
 
@@ -72,6 +73,7 @@ span {
 
 .navbar a:hover {
     background: var(--cor-principal);
+    color: var(--cor-fundo);
     transition: .3s;
 }
 
@@ -106,18 +108,23 @@ select, label, input {
     min-width: 110px;
     max-width: 110px;
     height: 50px;
-    border: 1px solid white;
+    border: 1px solid var(--cor-bordas);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
     background: none;
-    color: white;
+    color: var(--cor-texto);
     text-align: center;
 }
 
+.table_header input {
+    font-size: 1rem;
+    padding-left: 18px;
+}
+
 select option {
-    background-color: #282829;
+    background-color: var(--cor-fundo-claro);
 }
 
 .button-container {
@@ -129,12 +136,12 @@ select option {
     padding: 8px 40px;
     font-size: 1.7rem;
     font-weight: bold;
-    color: #cfcd43;
-    background-color: #282829;
+    color: var(--cor-principal);
+    background-color: var(--cor-fundo-claro);
     cursor: pointer;
 }
 
 .button-container button:hover {
-    background-color: #cfcd43;
-    color: #282829;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo-claro);
 }

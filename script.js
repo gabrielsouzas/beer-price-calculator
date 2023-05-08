@@ -1,5 +1,11 @@
 const container = document.querySelector('.container');
 
+const inputB = document.querySelector('#input-b');
+const inputC = document.querySelector('#input-c');
+const inputD = document.querySelector('#input-d');
+const inputE = document.querySelector('#input-e');
+const inputF = document.querySelector('#input-f');
+
 var priceInput = document.querySelectorAll('.price_input')
 var fifty = document.querySelectorAll('.fifty')
 var twoHundredSixtyNine = document.querySelectorAll('.two_hundred_sixty_nine');
@@ -33,14 +39,15 @@ function Calculate(event) {
             index = Number(event.target.dataset.index);
         }
         
+        price = price.replaceAll(',', '.');
         const fiftyMlCost = (Number(price)/(Number(selectMl[index].value)/50));
         fifty[index].innerHTML = fiftyMlCost.toFixed(3);
 
-        twoHundredSixtyNine[index].innerHTML = CalculateValueMl(fiftyMlCost, 269);
-        threeHundred[index].innerHTML = CalculateValueMl(fiftyMlCost, 300);
-        threeHundredFifty[index].innerHTML = CalculateValueMl(fiftyMlCost, 350);
-        thousand[index].innerHTML = CalculateValueMl(fiftyMlCost, 1000);
-        fourThousandTwoHundred[index].innerHTML = CalculateValueMl(fiftyMlCost, 4200);
+        twoHundredSixtyNine[index].innerHTML = CalculateValueMl(fiftyMlCost, inputB.value);
+        threeHundred[index].innerHTML = CalculateValueMl(fiftyMlCost, inputC.value);
+        threeHundredFifty[index].innerHTML = CalculateValueMl(fiftyMlCost, inputD.value);
+        thousand[index].innerHTML = CalculateValueMl(fiftyMlCost, inputE.value);
+        fourThousandTwoHundred[index].innerHTML = CalculateValueMl(fiftyMlCost, inputF.value);
     }
 }
 
@@ -56,10 +63,6 @@ function addChangeListenerSelectMl() {
             Calculate(priceInput[Number(element.dataset.index)]);
         })
     });
-}
-
-function addChangeListenerSelectMl_TEST(select) {
-    select.setAttribute('onchange', 'Calculate()')
 }
 
 addChangeListenerSelectMl();
