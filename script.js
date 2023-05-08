@@ -59,7 +59,7 @@ function addChangeListenerSelectMl() {
     const selectMl = document.querySelectorAll('.sel_ml')
     const priceInput = document.querySelectorAll('.price_input');
     selectMl.forEach(element => {
-        element.addEventListener('change', () => {
+        element.addEventListener('input', () => {
             Calculate(priceInput[Number(element.dataset.index)]);
         })
     });
@@ -71,9 +71,10 @@ function addLineBeer(){
     lastIndex++;
 
     const div = document.createElement('div');
-    const selectBrand = createSelectBrand();
+    const selectBrand = document.createElement('input');//createSelectBrand();
     
-    const selectMl = createSelectMl();
+    const selectMl = document.createElement('input');//createSelectMl();
+    selectMl.setAttribute('type', 'number')
     setIndexAndClass(selectMl, lastIndex, 'sel_ml');
     
     const input = document.createElement('input');

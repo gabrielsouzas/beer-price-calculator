@@ -118,9 +118,13 @@ select, label, input {
     text-align: center;
 }
 
-.table_header input {
+.table_header input, .table_header label {
     font-size: 1rem;
+    font-weight: 700;
     padding-left: 18px;
+    background-color: #d6d585;
+    color: var(--cor-fundo-claro);
+    border: 1px solid #282829;
 }
 
 select option {
@@ -144,4 +148,8 @@ select option {
 .button-container button:hover {
     background-color: var(--cor-principal);
     color: var(--cor-fundo-claro);
+}
+
+@media screen and (min-width: 600px) {
+    
 }
