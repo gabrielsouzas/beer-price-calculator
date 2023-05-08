@@ -84,7 +84,7 @@ span {
 
 /* SECTION */
 section {
-    padding: 120px 14%;
+    padding: 120px 0;
 }
 
 /* principal */
@@ -102,8 +102,10 @@ section {
 }
 
 select, label, input {
+    width: 110px;
     min-width: 110px;
-    min-height: 50px;
+    max-width: 110px;
+    height: 50px;
     border: 1px solid white;
     display: flex;
     align-items: center;
@@ -118,13 +120,13 @@ select option {
 }
 
 .button-container {
-    align-self: flex-start;
+    align-self: center;
     padding-top: 8px;
 }
 
 .button-container button {
-    padding: 8px;
-    font-size: 1.5rem;
+    padding: 8px 40px;
+    font-size: 1.7rem;
     font-weight: bold;
     color: #cfcd43;
     background-color: #282829;

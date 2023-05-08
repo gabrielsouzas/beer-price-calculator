@@ -8,8 +8,6 @@ var threeHundredFifty = document.querySelectorAll('.three_hundred_fifty')
 var thousand = document.querySelectorAll('.thousand')
 var fourThousandTwoHundred = document.querySelectorAll('.four_thousand_two_hundred')
 
-var selectMl = document.querySelectorAll('.sel_ml')
-
 var lastIndex = 0;
 
 function Calculate(event) {
@@ -50,11 +48,21 @@ function CalculateValueMl(fifty_ml_cost, selected_ml) {
     return (fifty_ml_cost*(Number(selected_ml)/50)).toFixed(2);
 }
 
-selectMl.forEach(element => {
-    element.addEventListener('change', () => {
-        Calculate(priceInput[Number(element.dataset.index)]);
-    })
-});
+function addChangeListenerSelectMl() {
+    const selectMl = document.querySelectorAll('.sel_ml')
+    const priceInput = document.querySelectorAll('.price_input');
+    selectMl.forEach(element => {
+        element.addEventListener('change', () => {
+            Calculate(priceInput[Number(element.dataset.index)]);
+        })
+    });
+}
+
+function addChangeListenerSelectMl_TEST(select) {
+    select.setAttribute('onchange', 'Calculate()')
+}
+
+addChangeListenerSelectMl();
 
 function addLineBeer(){
     lastIndex++;
@@ -100,6 +108,7 @@ function addLineBeer(){
     container.appendChild(div);
 
     removeAndAddButton();
+    addChangeListenerSelectMl();
 
 }
 
@@ -169,13 +178,10 @@ function removeAndAddButton() {
 
     const button = document.createElement('button');
     button.setAttribute('id', 'btn-add');
+    button.setAttribute('onclick', 'addLineBeer()');
     button.classList.add('material-symbols-outlined');
     button.innerHTML = 'add';
 
     newButtonContainer.appendChild(button);
     container.appendChild(newButtonContainer);
 }
-
-const btnAdd = document.querySelector('#btn-add');
-
-btnAdd.addEventListener('click', addLineBeer);
