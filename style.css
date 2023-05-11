@@ -94,6 +94,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    overflow: auto;
+    padding: 15px;
 }
 
 .container div {
@@ -151,7 +153,10 @@ select option {
 }
 
 @media screen and (max-width: 600px) {
-    #input-c, #input-d, #input-e, #input-f {
+    /*#input-c, #input-d, #input-e, #input-f {
         display: none;
+    }*/
+    .container {
+        align-items: flex-start;
     }
 }
