@@ -129,6 +129,10 @@ select, label, input {
     border: 1px solid #282829;
 }
 
+.table_header input {
+    padding-left: 18px;
+}
+
 select option {
     background-color: var(--cor-fundo-claro);
 }
