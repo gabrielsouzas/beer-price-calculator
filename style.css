@@ -129,8 +129,14 @@ select, label, input {
     border: 1px solid #282829;
 }
 
-.table_header input {
-    padding-left: 18px;
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
 }
 
 select option {

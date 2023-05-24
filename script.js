@@ -5,6 +5,7 @@ const inputC = document.querySelector('#input-c');
 const inputD = document.querySelector('#input-d');
 const inputE = document.querySelector('#input-e');
 const inputF = document.querySelector('#input-f');
+const inputsQtde = document.querySelectorAll('.input_qtde');
 
 var priceInput = document.querySelectorAll('.price_input')
 var fifty = document.querySelectorAll('.fifty')
@@ -56,7 +57,7 @@ function CalculateValueMl(fifty_ml_cost, selected_ml) {
 }
 
 function addChangeListenerSelectMl() {
-    const selectMl = document.querySelectorAll('.sel_ml')
+    const selectMl = document.querySelectorAll('.sel_ml');
     const priceInput = document.querySelectorAll('.price_input');
     selectMl.forEach(element => {
         element.addEventListener('input', () => {
@@ -66,6 +67,20 @@ function addChangeListenerSelectMl() {
 }
 
 addChangeListenerSelectMl();
+
+function addChangeListenerInputsQtde() {
+    inputsQtde.forEach(input => {
+        const selectMl = document.querySelectorAll('.sel_ml');
+        const priceInput = document.querySelectorAll('.price_input');
+        input.addEventListener('input', () => {
+            selectMl.forEach(element => {
+                Calculate(priceInput[Number(element.dataset.index)]);
+            });
+        })
+    });
+}
+
+addChangeListenerInputsQtde();
 
 function addLineBeer(){
     lastIndex++;
@@ -113,6 +128,7 @@ function addLineBeer(){
 
     removeAndAddButton();
     addChangeListenerSelectMl();
+    addChangeListenerInputsQtde();
 
 }
 
@@ -189,5 +205,3 @@ function removeAndAddButton() {
     newButtonContainer.appendChild(button);
     container.appendChild(newButtonContainer);
 }
-
-//teste
