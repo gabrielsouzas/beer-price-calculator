@@ -1,5 +1,7 @@
 const container = document.querySelector('.container');
 
+const mode = document.querySelector('#mode');
+
 const inputB = document.querySelector('#input-b');
 const inputC = document.querySelector('#input-c');
 const inputD = document.querySelector('#input-d');
@@ -205,3 +207,34 @@ function removeAndAddButton() {
     newButtonContainer.appendChild(button);
     container.appendChild(newButtonContainer);
 }
+
+// Mode
+mode.addEventListener('click', () => {
+    if (mode.innerHTML == 'light_mode') {
+        mode.innerHTML = 'dark_mode';
+    } else {
+        mode.innerHTML = 'light_mode';
+    }
+
+    /*document.body.style.setProperty('--cor-fundo', '#FFF');
+    document.body.style.setProperty('--cor-fundo-claro', '#FFF');
+    document.body.style.setProperty('--cor-fundo-transparente', '#FFF');
+    document.body.style.setProperty('--cor-principal', '#FFF');
+    document.body.style.setProperty('--cor-principal-clara', '#FFF');
+    document.body.style.setProperty('--2nd-cor-principal', '#FFF');
+    document.body.style.setProperty('--cor-texto', '#FFF');
+    document.body.style.setProperty('--cor-bordas', '#FFF');*/
+
+    /*
+    
+    --cor-fundo: #373738;
+    --cor-fundo-claro: #282829;
+    --cor-fundo-transparente: #d7d8abc5;
+    --cor-principal: #cfcd43;
+    --cor-principal-clara: #d8d7ab;
+    --2nd-cor-principal: #ffffffcc;
+    --cor-texto: #fff;
+    --cor-bordas: #fff;
+
+    */
+});

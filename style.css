@@ -25,6 +25,18 @@
     --fonte-grande: 5rem;
     --h2-fonte: 1.9rem;
     --p-fonte: 1rem;
+/*
+    --cor-fundo: #ffffff;
+    --cor-fundo-claro: #dfdcdc;
+    --cor-fundo-transparente: #d7d8abc5;
+    --cor-principal: #cfcd43;
+    --cor-principal-clara: #d8d7ab;
+    --2nd-cor-principal: #ffffffcc;
+    --cor-texto: #000000;
+    --cor-bordas: #000000;
+    --fonte-grande: 5rem;
+    --h2-fonte: 1.9rem;
+    --p-fonte: 1rem;*/
 }
 
 /* BODY */
@@ -62,18 +74,26 @@ span {
     display: flex;
 }
 
-.navbar a {
+#mode {
     color: var(--cor-texto);
-    font-size: 1rem;
-    padding: 10px 20px;
-    font-weight: 500;
-    border-radius: 5px;
+    /*font-size: 1rem;
+    font-weight: 500;*/
+    
+    border-radius: 100%;
     cursor: pointer;
+
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
 
-.navbar a:hover {
-    background: var(--cor-principal);
-    color: var(--cor-fundo);
+#mode:hover {
+    /*background: var(--cor-principal);*/
+    color: var(--cor-principal);
+    font-variation-settings: 'FILL' 1;
+    font-size: 1.8rem;
     transition: .3s;
 }
 
@@ -242,7 +262,7 @@ select option {
         max-width: 60px;
         height: 30px;
     }
-    .logo, #home {
+    .logo, #mode {
         font-size: 0.9rem;
     }
     header {
@@ -263,7 +283,7 @@ select option {
     header {
         padding: 16px 8px;
     }
-    .logo, #home {
+    .logo, #mode {
         font-size: 0.8rem;
     }
 }
