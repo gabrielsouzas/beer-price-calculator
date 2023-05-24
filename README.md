@@ -1,10 +1,10 @@
 # Comparador de Preços
 
-![GitHub repo size](https://img.shields.io/github/repo-size/price-calculator/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/price-calculator/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/price-calculator/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/price-calculator/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/price-calculator/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/gabrielsouzas/price-calculator?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/gabrielsouzas/price-calculator?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/gabrielsouzas/price-calculator?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/gabrielsouzas/price-calculator?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/gabrielsouzas/price-calculator?style=for-the-badge)
 
 <img src="./print/print_price_calculator.png" alt="Print Screen">
 
