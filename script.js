@@ -8,11 +8,11 @@ const inputF = document.querySelector('#input-f');
 
 var priceInput = document.querySelectorAll('.price_input')
 var fifty = document.querySelectorAll('.fifty')
-var twoHundredSixtyNine = document.querySelectorAll('.two_hundred_sixty_nine');
-var threeHundred = document.querySelectorAll('.three_hundred')
-var threeHundredFifty = document.querySelectorAll('.three_hundred_fifty')
-var thousand = document.querySelectorAll('.thousand')
-var fourThousandTwoHundred = document.querySelectorAll('.four_thousand_two_hundred')
+var labelB = document.querySelectorAll('.label_b');
+var labelC = document.querySelectorAll('.label_c')
+var labelD = document.querySelectorAll('.label_d')
+var labelE = document.querySelectorAll('.label_e')
+var labelF = document.querySelectorAll('.label_f')
 
 var lastIndex = 0;
 
@@ -21,11 +21,11 @@ function Calculate(event) {
     selectMl = document.querySelectorAll('.sel_ml')
     priceInput = document.querySelectorAll('.price_input')
     fifty = document.querySelectorAll('.fifty')
-    twoHundredSixtyNine = document.querySelectorAll('.two_hundred_sixty_nine');
-    threeHundred = document.querySelectorAll('.three_hundred')
-    threeHundredFifty = document.querySelectorAll('.three_hundred_fifty')
-    thousand = document.querySelectorAll('.thousand')
-    fourThousandTwoHundred = document.querySelectorAll('.four_thousand_two_hundred')
+    labelB = document.querySelectorAll('.label_b');
+    labelC = document.querySelectorAll('.label_c')
+    labelD = document.querySelectorAll('.label_d')
+    labelE = document.querySelectorAll('.label_e')
+    labelF = document.querySelectorAll('.label_f')
 
 
     if (event) {
@@ -43,11 +43,11 @@ function Calculate(event) {
         const fiftyMlCost = (Number(price)/(Number(selectMl[index].value)/50));
         fifty[index].innerHTML = fiftyMlCost.toFixed(3);
 
-        twoHundredSixtyNine[index].innerHTML = CalculateValueMl(fiftyMlCost, inputB.value);
-        threeHundred[index].innerHTML = CalculateValueMl(fiftyMlCost, inputC.value);
-        threeHundredFifty[index].innerHTML = CalculateValueMl(fiftyMlCost, inputD.value);
-        thousand[index].innerHTML = CalculateValueMl(fiftyMlCost, inputE.value);
-        fourThousandTwoHundred[index].innerHTML = CalculateValueMl(fiftyMlCost, inputF.value);
+        labelB[index].innerHTML = CalculateValueMl(fiftyMlCost, inputB.value);
+        labelC[index].innerHTML = CalculateValueMl(fiftyMlCost, inputC.value);
+        labelD[index].innerHTML = CalculateValueMl(fiftyMlCost, inputD.value);
+        labelE[index].innerHTML = CalculateValueMl(fiftyMlCost, inputE.value);
+        labelF[index].innerHTML = CalculateValueMl(fiftyMlCost, inputF.value);
     }
 }
 
@@ -85,19 +85,19 @@ function addLineBeer(){
     setIndexAndClass(labelA, lastIndex, 'fifty', '0,00');
 
     const labelB = document.createElement('label');
-    setIndexAndClass(labelB, lastIndex, 'two_hundred_sixty_nine', '0,00');
+    setIndexAndClass(labelB, lastIndex, 'label_b', '0,00');
 
     const labelC = document.createElement('label');
-    setIndexAndClass(labelC, lastIndex, 'three_hundred', '0,00');
+    setIndexAndClass(labelC, lastIndex, 'label_c', '0,00');
 
     const labelD = document.createElement('label');
-    setIndexAndClass(labelD, lastIndex, 'three_hundred_fifty', '0,00');
+    setIndexAndClass(labelD, lastIndex, 'label_d', '0,00');
 
     const labelE = document.createElement('label');
-    setIndexAndClass(labelE, lastIndex, 'thousand', '0,00');
+    setIndexAndClass(labelE, lastIndex, 'label_e', '0,00');
 
     const labelF = document.createElement('label');
-    setIndexAndClass(labelF, lastIndex, 'four_thousand_two_hundred', '0,00');
+    setIndexAndClass(labelF, lastIndex, 'label_f', '0,00');
 
     div.appendChild(selectBrand);
     div.appendChild(selectMl);

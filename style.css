@@ -123,7 +123,7 @@ select, label, input {
 .table_header input, .table_header label {
     font-size: 1rem;
     font-weight: 700;
-    padding-left: 18px;
+    /*padding-left: 18px;*/
     background-color: #d6d585;
     color: var(--cor-fundo-claro);
     border: 1px solid #282829;
@@ -152,11 +152,108 @@ select option {
     color: var(--cor-fundo-claro);
 }
 
-@media screen and (max-width: 600px) {
-    /*#input-c, #input-d, #input-e, #input-f {
-        display: none;
-    }*/
-    .container {
+@media screen and (max-width: 1024px) {
+    /*.container {
         align-items: flex-start;
+    }*/
+}
+
+@media screen and (max-width: 1000px) {
+    #input-f, .label_f {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    #input-e, .label_e {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #input-d, .label_d {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    #input-c, .label_c {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 564px) {
+    select, label, input {
+        width: 90px;
+        min-width: 90px;
+        max-width: 90px;
+        height: 40px;
+        
+    }
+    .table_header input, .table_header label {
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    select, label, input {
+        width: 80px;
+        min-width: 80px;
+        max-width: 80px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    select, label, input {
+        width: 70px;
+        min-width: 70px;
+        max-width: 70px;
+        height: 30px;
+    }
+    .table_header input, .table_header label {
+        font-size: 0.7rem;
+    }
+    header {
+        padding: 22px 13px;
+    }
+    
+}
+
+@media screen and (max-width: 360px) {
+    select, label, input {
+        width: 60px;
+        min-width: 60px;
+        max-width: 60px;
+        height: 30px;
+    }
+    .logo, #home {
+        font-size: 0.9rem;
+    }
+    header {
+        padding: 20px 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    select, label, input {
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
+        height: 30px;
+    }
+    .table_header input, .table_header label {
+        font-size: 0.6rem;
+    }
+    header {
+        padding: 16px 8px;
+    }
+    .logo, #home {
+        font-size: 0.8rem;
     }
 }
