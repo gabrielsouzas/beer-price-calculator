@@ -210,8 +210,11 @@ function removeAndAddButton() {
 
 // Mode
 mode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
     if (mode.innerHTML == 'light_mode') {
         mode.innerHTML = 'dark_mode';
+        
     } else {
         mode.innerHTML = 'light_mode';
     }

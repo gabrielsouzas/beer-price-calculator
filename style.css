@@ -14,20 +14,37 @@
 
 /* VARIAVEIS */
 :root {
+    /*--cor-fundo: #373738;
+    --cor-fundo-claro: #282829;
+    --cor-fundo-transparente: #d7d8abc5;
+    --cor-principal: #cfcd43; /* #2f91bf *//*
+    --cor-input-label: #d6d585;
+    --cor-texto-input-label: #282829;
+    --cor-principal-clara: #d8d7ab;
+    --2nd-cor-principal: #ffffffcc;
+    --cor-texto: #fff;
+    --cor-texto-header: #fff;
+    --cor-bordas: #fff;*/
+    --fonte-grande: 5rem;
+    --h2-fonte: 1.9rem;
+    --p-fonte: 1rem;
+}
+
+.dark_mode {
     --cor-fundo: #373738;
     --cor-fundo-claro: #282829;
     --cor-fundo-transparente: #d7d8abc5;
     --cor-principal: #cfcd43; /* #2f91bf */
     --cor-input-label: #d6d585;
+    --cor-texto-input-label: #282829;
     --cor-principal-clara: #d8d7ab;
     --2nd-cor-principal: #ffffffcc;
     --cor-texto: #fff;
     --cor-texto-header: #fff;
     --cor-bordas: #fff;
-    --fonte-grande: 5rem;
-    --h2-fonte: 1.9rem;
-    --p-fonte: 1rem;
+}
 
+.light_mode {
     --cor-fundo: #ffffff;
     --cor-fundo-claro: #282829c5;
     --cor-fundo-transparente: #d7d8abc5;
@@ -39,9 +56,6 @@
     --cor-texto: #000000;
     --cor-texto-header: #fff;
     --cor-bordas: #000000;
-    --fonte-grande: 5rem;
-    --h2-fonte: 1.9rem;
-    --p-fonte: 1rem;
 }
 
 /* BODY */
