@@ -18,25 +18,30 @@
     --cor-fundo-claro: #282829;
     --cor-fundo-transparente: #d7d8abc5;
     --cor-principal: #cfcd43; /* #2f91bf */
+    --cor-input-label: #d6d585;
     --cor-principal-clara: #d8d7ab;
     --2nd-cor-principal: #ffffffcc;
     --cor-texto: #fff;
+    --cor-texto-header: #fff;
     --cor-bordas: #fff;
     --fonte-grande: 5rem;
     --h2-fonte: 1.9rem;
     --p-fonte: 1rem;
-/*
+
     --cor-fundo: #ffffff;
-    --cor-fundo-claro: #dfdcdc;
+    --cor-fundo-claro: #282829c5;
     --cor-fundo-transparente: #d7d8abc5;
     --cor-principal: #cfcd43;
+    --cor-input-label: #d6d585;
+    --cor-texto-input-label: #282829;
     --cor-principal-clara: #d8d7ab;
     --2nd-cor-principal: #ffffffcc;
     --cor-texto: #000000;
+    --cor-texto-header: #fff;
     --cor-bordas: #000000;
     --fonte-grande: 5rem;
     --h2-fonte: 1.9rem;
-    --p-fonte: 1rem;*/
+    --p-fonte: 1rem;
 }
 
 /* BODY */
@@ -61,7 +66,7 @@ header {
 }
 
 .logo {
-    color: var(--cor-texto);
+    color: var(--cor-texto-header);
     font-size: 1.8rem;
     font-weight: 600;
 }
@@ -75,7 +80,7 @@ span {
 }
 
 #mode {
-    color: var(--cor-texto);
+    color: var(--cor-texto-header);
     /*font-size: 1rem;
     font-weight: 500;*/
     
@@ -144,8 +149,8 @@ select, label, input {
     font-size: 1rem;
     font-weight: 700;
     /*padding-left: 18px;*/
-    background-color: #d6d585;
-    color: var(--cor-fundo-claro);
+    background-color: var(--cor-input-label);
+    color: var(--cor-texto-input-label);
     border: 1px solid #282829;
 }
 
