@@ -211,33 +211,54 @@ function removeAndAddButton() {
 // Mode
 mode.addEventListener('click', () => {
     if (mode.innerHTML == 'light_mode') {
-        mode.innerHTML = 'dark_mode';
-
-        document.body.style.setProperty('--cor-fundo', '#ffffff');
-        document.body.style.setProperty('--cor-fundo-claro', '#282829c5');
-        document.body.style.setProperty('--cor-fundo-transparente', '#d7d8abc5');
-        document.body.style.setProperty('--cor-principal', '#cfcd43');
-        document.body.style.setProperty('--cor-input-label', '#d6d585');
-        document.body.style.setProperty('--cor-texto-input-label', '#282829');
-        document.body.style.setProperty('--cor-principal-clara', '#d8d7ab');
-        document.body.style.setProperty('--2nd-cor-principal', '#ffffffcc');
-        document.body.style.setProperty('--cor-texto', '#000000');
-        document.body.style.setProperty('--cor-texto-header', '#fff');
-        document.body.style.setProperty('--cor-bordas', '#000000');
-        
+        setLightThemeVariables();
     } else {
-        mode.innerHTML = 'light_mode';
-
-        document.body.style.setProperty('--cor-fundo', '#373738');
-        document.body.style.setProperty('--cor-fundo-claro', '#282829');
-        document.body.style.setProperty('--cor-fundo-transparente', '#d7d8abc5');
-        document.body.style.setProperty('--cor-principal', '#cfcd43'); /* #2f91bf */
-        document.body.style.setProperty('--cor-input-label', '#d6d585');
-        document.body.style.setProperty('--cor-texto-input-label', '#282829');
-        document.body.style.setProperty('--cor-principal-clara', '#d8d7ab');
-        document.body.style.setProperty('--2nd-cor-principal', '#ffffffcc');
-        document.body.style.setProperty('--cor-texto', '#fff');
-        document.body.style.setProperty('--cor-texto-header', '#fff');
-        document.body.style.setProperty('--cor-bordas', '#fff');
+        setDarkThemeVariables();
     }
 });
+
+function setLightThemeVariables() {
+    mode.innerHTML = 'dark_mode';
+
+    document.body.style.setProperty('--cor-fundo', '#ffffff');
+    document.body.style.setProperty('--cor-fundo-claro', '#282829c5');
+    document.body.style.setProperty('--cor-fundo-transparente', '#d7d8abc5');
+    document.body.style.setProperty('--cor-principal', '#cfcd43');
+    document.body.style.setProperty('--cor-input-label', '#d6d585');
+    document.body.style.setProperty('--cor-texto-input-label', '#282829');
+    document.body.style.setProperty('--cor-principal-clara', '#d8d7ab');
+    document.body.style.setProperty('--2nd-cor-principal', '#ffffffcc');
+    document.body.style.setProperty('--cor-texto', '#000000');
+    document.body.style.setProperty('--cor-texto-header', '#fff');
+    document.body.style.setProperty('--cor-bordas', '#000000');
+}
+
+function setDarkThemeVariables() {
+    mode.innerHTML = 'light_mode';
+
+    document.body.style.setProperty('--cor-fundo', '#373738');
+    document.body.style.setProperty('--cor-fundo-claro', '#282829');
+    document.body.style.setProperty('--cor-fundo-transparente', '#d7d8abc5');
+    document.body.style.setProperty('--cor-principal', '#cfcd43'); /* #2f91bf */
+    document.body.style.setProperty('--cor-input-label', '#d6d585');
+    document.body.style.setProperty('--cor-texto-input-label', '#282829');
+    document.body.style.setProperty('--cor-principal-clara', '#d8d7ab');
+    document.body.style.setProperty('--2nd-cor-principal', '#ffffffcc');
+    document.body.style.setProperty('--cor-texto', '#fff');
+    document.body.style.setProperty('--cor-texto-header', '#fff');
+    document.body.style.setProperty('--cor-bordas', '#fff');
+}
+
+const prefersColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Altera o tema
+function changeTheme() {
+  if( prefersColorScheme.matches ) {
+    setDarkThemeVariables();
+  } else {
+    setLightThemeVariables();
+  }
+}
+
+// Altera o tema conforme o tema do usuário
+changeTheme(prefersColorScheme);

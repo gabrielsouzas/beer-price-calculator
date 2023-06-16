@@ -256,7 +256,9 @@ select option {
     .table_header input, .table_header label {
         font-size: 0.8rem;
     }
-    
+    section h1 {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -317,6 +319,9 @@ select option {
         padding: 16px 8px;
     }
     .logo, #mode {
+        font-size: 0.8rem;
+    }
+    section h1 {
         font-size: 0.8rem;
     }
 }
