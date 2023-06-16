@@ -14,17 +14,19 @@
 
 /* VARIAVEIS */
 :root {
-    /*--cor-fundo: #373738;
+    /* dark_mode */
+    --cor-fundo: #373738;
     --cor-fundo-claro: #282829;
     --cor-fundo-transparente: #d7d8abc5;
-    --cor-principal: #cfcd43; /* #2f91bf *//*
+    --cor-principal: #cfcd43; /* #2f91bf */
     --cor-input-label: #d6d585;
     --cor-texto-input-label: #282829;
     --cor-principal-clara: #d8d7ab;
     --2nd-cor-principal: #ffffffcc;
     --cor-texto: #fff;
     --cor-texto-header: #fff;
-    --cor-bordas: #fff;*/
+    --cor-bordas: #fff;
+
     --fonte-grande: 5rem;
     --h2-fonte: 1.9rem;
     --p-fonte: 1rem;
@@ -95,6 +97,7 @@ span {
 
 #mode {
     color: var(--cor-texto-header);
+    user-select: none;
     /*font-size: 1rem;
     font-weight: 500;*/
     
@@ -128,6 +131,13 @@ section {
     padding: 120px 0;
 }
 
+section > h1 {
+    text-align: center;
+    padding: 15px 15px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
 /* principal */
 .container {
     display: flex;
@@ -142,6 +152,10 @@ section {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+}
+
+.input_qtde {
+    color: blue!important;
 }
 
 select, label, input {

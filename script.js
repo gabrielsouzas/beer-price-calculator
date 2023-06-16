@@ -210,34 +210,34 @@ function removeAndAddButton() {
 
 // Mode
 mode.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
     if (mode.innerHTML == 'light_mode') {
         mode.innerHTML = 'dark_mode';
+
+        document.body.style.setProperty('--cor-fundo', '#ffffff');
+        document.body.style.setProperty('--cor-fundo-claro', '#282829c5');
+        document.body.style.setProperty('--cor-fundo-transparente', '#d7d8abc5');
+        document.body.style.setProperty('--cor-principal', '#cfcd43');
+        document.body.style.setProperty('--cor-input-label', '#d6d585');
+        document.body.style.setProperty('--cor-texto-input-label', '#282829');
+        document.body.style.setProperty('--cor-principal-clara', '#d8d7ab');
+        document.body.style.setProperty('--2nd-cor-principal', '#ffffffcc');
+        document.body.style.setProperty('--cor-texto', '#000000');
+        document.body.style.setProperty('--cor-texto-header', '#fff');
+        document.body.style.setProperty('--cor-bordas', '#000000');
         
     } else {
         mode.innerHTML = 'light_mode';
+
+        document.body.style.setProperty('--cor-fundo', '#373738');
+        document.body.style.setProperty('--cor-fundo-claro', '#282829');
+        document.body.style.setProperty('--cor-fundo-transparente', '#d7d8abc5');
+        document.body.style.setProperty('--cor-principal', '#cfcd43'); /* #2f91bf */
+        document.body.style.setProperty('--cor-input-label', '#d6d585');
+        document.body.style.setProperty('--cor-texto-input-label', '#282829');
+        document.body.style.setProperty('--cor-principal-clara', '#d8d7ab');
+        document.body.style.setProperty('--2nd-cor-principal', '#ffffffcc');
+        document.body.style.setProperty('--cor-texto', '#fff');
+        document.body.style.setProperty('--cor-texto-header', '#fff');
+        document.body.style.setProperty('--cor-bordas', '#fff');
     }
-
-    /*document.body.style.setProperty('--cor-fundo', '#FFF');
-    document.body.style.setProperty('--cor-fundo-claro', '#FFF');
-    document.body.style.setProperty('--cor-fundo-transparente', '#FFF');
-    document.body.style.setProperty('--cor-principal', '#FFF');
-    document.body.style.setProperty('--cor-principal-clara', '#FFF');
-    document.body.style.setProperty('--2nd-cor-principal', '#FFF');
-    document.body.style.setProperty('--cor-texto', '#FFF');
-    document.body.style.setProperty('--cor-bordas', '#FFF');*/
-
-    /*
-    
-    --cor-fundo: #373738;
-    --cor-fundo-claro: #282829;
-    --cor-fundo-transparente: #d7d8abc5;
-    --cor-principal: #cfcd43;
-    --cor-principal-clara: #d8d7ab;
-    --2nd-cor-principal: #ffffffcc;
-    --cor-texto: #fff;
-    --cor-bordas: #fff;
-
-    */
 });
